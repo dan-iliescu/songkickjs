@@ -1253,7 +1253,7 @@ var widget = (function (t) {
             !o &&
               this._detectStyle &&
               this._parentStyle &&
-              ((cssProperty = "black"),
+              ((cssProperty = "font-color" === t ? "color" : t),
               (o = this._parentStyle.getPropertyValue(cssProperty))),
               o && (e += "&" + t + "=" + encodeURIComponent(o));
           }
