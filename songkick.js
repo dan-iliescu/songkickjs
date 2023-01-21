@@ -286,6 +286,8 @@ var widget = (function (t) {
           ((e.props.src = "javascript:false"),
           F(o, e.props),
           (o.border = o.frameBorder = 1),
+          (o.sandbox =
+            "allow-same-origin allow-scripts allow-popups allow-forms"),
           (o.allowTransparency = !0),
           e.container.appendChild(o),
           e.onLoad && v(o, "load", e.onLoad),
