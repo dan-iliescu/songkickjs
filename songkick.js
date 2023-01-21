@@ -285,7 +285,7 @@ var widget = (function (t) {
         if (
           ((e.props.src = "javascript:false"),
           F(o, e.props),
-          (o.border = o.frameBorder = 0),
+          (o.border = o.frameBorder = 1),
           (o.allowTransparency = !0),
           e.container.appendChild(o),
           e.onLoad && v(o, "load", e.onLoad),
