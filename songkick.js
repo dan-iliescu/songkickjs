@@ -1227,6 +1227,7 @@ var widget = (function (t) {
   },
   xDiN: function (e, n) {
     (SongkickWidget.Injector = function () {
+      console.log(location.hostname);
       (this._widgetAnchor = document.querySelector("a.songkick-widget")),
         this._widgetAnchor &&
           ((this._detectStyle =
