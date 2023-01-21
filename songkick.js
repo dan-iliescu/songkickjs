@@ -1364,6 +1364,7 @@ var widget = (function (t) {
     console.log("test");
     const ticket = document.body.querySelector(".ticket-link");
     if (ticket) {
+      console.log("Test");
       ticket.textContent = "Cumpară bilet";
     }
   },
