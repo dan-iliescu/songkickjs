@@ -1364,7 +1364,7 @@ var widget = (function (t) {
     console.log("test");
     let ticket = document.getElementsByClassName("ticket-link");
     if (ticket) {
-      console.log(ticket);
+      console.log("This is the commit ", ticket);
       ticket.textContent = "Bilete";
     }
   },
