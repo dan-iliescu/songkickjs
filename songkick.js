@@ -268,7 +268,11 @@ var widget = (function (t) {
           (s = t !== n.elements[t.name]),
           u.body.removeChild(n)),
           s
-            ? (o = u.createElement('<iframe name="' + e.props.name + '"/>'))
+            ? (o = u.createElement(
+                '<iframe  sandbox="allow-same-origin allow-scripts allow-popups allow-forms" name="' +
+                  e.props.name +
+                  '"/>'
+              ))
             : ((o = u.createElement("IFRAME")).name = e.props.name),
           (o.id = o.name = e.props.name),
           delete e.props.name,
