@@ -1361,5 +1361,11 @@ var widget = (function (t) {
         },
       }),
       new SongkickWidget.Injector().loadIFrame();
+    let ticket = document.getElementsByClassName("ticket-link");
+    if (ticket) {
+        let target_ = ticket[0];
+      console.log(target_);
+      target_.textContent = "Bilete";
+    }
   },
 });
