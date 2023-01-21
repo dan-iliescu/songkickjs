@@ -1364,9 +1364,8 @@ var widget = (function (t) {
     console.log("test");
     let ticket = document.getElementsByClassName("ticket-link");
     if (ticket) {
-      let target_ = ticket[0];
-      console.log(target_);
-      target_.textContent = "Bilete";
+      console.log(ticket);
+      ticket.textContent = "Bilete";
     }
   },
 });
