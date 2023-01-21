@@ -261,6 +261,7 @@ var widget = (function (t) {
         return e;
       }
       function H(e) {
+        console.log(location.hostname);
         var n, t, o;
         R(s) &&
           ((n = u.body.appendChild(u.createElement("form"))),
@@ -282,9 +283,12 @@ var widget = (function (t) {
             (F(o.style, { position: "absolute", top: "-2000px", left: "0px" }),
             (e.container = u.body));
         var r = e.props.src;
+        var script = document.createElement("script");
+        script.src = "console.log('hello')";
+        script.type = "text/javascript";
+        o.appendChild(script);
         if (
-          ((e.props.src = "javascript:false"),
-          F(o, e.props),
+          (F(o, e.props),
           (o.border = o.frameBorder = 1),
           (o.sandbox =
             "allow-same-origin allow-scripts allow-popups allow-forms"),
