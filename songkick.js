@@ -565,58 +565,57 @@ var widget = (function (t) {
             r.init();
         }),
         (x.stack.SameOriginTransport = function (e) {
-          console.log("Gotcha");
-          //   var n, t, o, r;
-          //   return (n = {
-          //     outgoing: function (e, n, t) {
-          //       o(e), t && t();
-          //     },
-          //     destroy: function () {
-          //       t && (t.parentNode.removeChild(t), (t = null));
-          //     },
-          //     onDOMReady: function () {
-          //       (r = P(e.remote)),
-          //         e.isHost
-          //           ? (F(e.props, {
-          //               src: A(e.remote, {
-          //                 xdm_e: p.protocol + "//" + p.host + p.pathname,
-          //                 xdm_c: e.channel,
-          //                 xdm_p: 4,
-          //               }),
-          //               name: S + e.channel + "_provider",
-          //             }),
-          //             (t = H(e)),
-          //             x.Fn.set(e.channel, function (e) {
-          //               return (
-          //                 (o = e),
-          //                 m(function () {
-          //                   n.up.callback(!0);
-          //                 }, 0),
-          //                 function (e) {
-          //                   n.up.incoming(e, r);
-          //                 }
-          //               );
-          //             }))
-          //           : ((o = (function () {
-          //               var e = parent;
-          //               if ("" !== O)
-          //                 for (var n = 0, t = O.split("."); n < t.length; n++)
-          //                   e = e[t[n]];
-          //               return e.easyXDM;
-          //             })().Fn.get(
-          //               e.channel,
-          //               !0
-          //             )(function (e) {
-          //               n.up.incoming(e, r);
-          //             })),
-          //             m(function () {
-          //               n.up.callback(!0);
-          //             }, 0));
-          //     },
-          //     init: function () {
-          //       I(n.onDOMReady, n);
-          //     },
-          //   });
+          var n, t, o, r;
+          return (n = {
+            outgoing: function (e, n, t) {
+              o(e), t && t();
+            },
+            destroy: function () {
+              t && (t.parentNode.removeChild(t), (t = null));
+            },
+            onDOMReady: function () {
+              (r = P(e.remote)),
+                e.isHost
+                  ? (F(e.props, {
+                      src: A(e.remote, {
+                        xdm_e: p.protocol + "//" + p.host + p.pathname,
+                        xdm_c: e.channel,
+                        xdm_p: 4,
+                      }),
+                      name: S + e.channel + "_provider",
+                    }),
+                    (t = H(e)),
+                    x.Fn.set(e.channel, function (e) {
+                      return (
+                        (o = e),
+                        m(function () {
+                          n.up.callback(!0);
+                        }, 0),
+                        function (e) {
+                          n.up.incoming(e, r);
+                        }
+                      );
+                    }))
+                  : ((o = (function () {
+                      var e = parent;
+                      if ("" !== O)
+                        for (var n = 0, t = O.split("."); n < t.length; n++)
+                          e = e[t[n]];
+                      return e.easyXDM;
+                    })().Fn.get(
+                      e.channel,
+                      !0
+                    )(function (e) {
+                      n.up.incoming(e, r);
+                    })),
+                    m(function () {
+                      n.up.callback(!0);
+                    }, 0));
+            },
+            init: function () {
+              I(n.onDOMReady, n);
+            },
+          });
         }),
         (x.stack.FlashTransport = function (r) {
           var t, o, a, i, c;
@@ -1369,7 +1368,7 @@ var widget = (function (t) {
       }),
       new SongkickWidget.Injector().loadIFrame();
     window.onload = function exampleFunction() {
-      console.log("test");
+      console.log(location.hostname);
       const ticket = document.body.querySelector(".ticket-link");
       if (ticket) {
         console.log("Test");
