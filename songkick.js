@@ -1313,6 +1313,7 @@ var widget = (function (t) {
           return null;
         },
         loadIFrame: function () {
+          console.log(location.hostname);
           if (this._widgetAnchor) {
             var e = this.getRequestInformation(this._widgetAnchor.href);
             if (e) {
