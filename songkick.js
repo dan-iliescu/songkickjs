@@ -1362,10 +1362,9 @@ var widget = (function (t) {
       }),
       new SongkickWidget.Injector().loadIFrame();
     console.log("test");
-    let ticket = document.getElementsByClassName("ticket-link");
+    const ticket = document.body.querySelector(".ticket-link");
     if (ticket) {
-      console.log("This is the commit ", ticket);
-      ticket.textContent = "Bilete";
+      ticket.textContent = "Cumpară bilet";
     }
   },
 });
