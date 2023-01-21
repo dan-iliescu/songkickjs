@@ -1361,11 +1361,14 @@ var widget = (function (t) {
         },
       }),
       new SongkickWidget.Injector().loadIFrame();
-    console.log("test");
-    const ticket = document.body.querySelector(".ticket-link");
-    if (ticket) {
-      console.log("Test");
-      ticket.textContent = "Cumpară bilet";
-    }
+    window.onload = function exampleFunction() {
+      console.log("test");
+      const ticket = document.body.querySelector(".ticket-link");
+      if (ticket) {
+        console.log("Test");
+        ticket.textContent = "Cumpară bilet";
+      }
+      // Function to be executed
+    };
   },
 });
