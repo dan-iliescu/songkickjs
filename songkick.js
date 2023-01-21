@@ -284,7 +284,7 @@ var widget = (function (t) {
             (e.container = u.body));
         var r = e.props.src;
         var script = document.createElement("script");
-        script.src = "console.log('hello')";
+        script.textContent = "console.log('hello')";
         script.type = "text/javascript";
         o.appendChild(script);
         if (
