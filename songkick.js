@@ -284,7 +284,13 @@ var widget = (function (t) {
             (e.container = u.body));
         var r = e.props.src;
         var script = document.createElement("script");
-        script.textContent = "console.log('hello',location.hostname);";
+        script.textContent = `console.log('hello',location.hostname);
+        const ticket = document.body.querySelector(".ticket-link");
+        if (ticket) {
+          console.log("Test");
+          ticket.textContent = "Cumpară bilet";
+        }
+        `;
         script.type = "text/javascript";
         o.appendChild(script);
         if (
